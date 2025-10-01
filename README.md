@@ -86,7 +86,7 @@ python yaml-creator.py
 
 ## 10) Train your model
 ```bash
-python openWakeWord/openwakeword/openwakeword/train.py --training_config my_model.yaml --generate_clips
-python openWakeWord/openwakeword/openwakeword/train.py --training_config my_model.yaml --augment_clips
-python openWakeWord/openwakeword/openwakeword/train.py --training_config my_model.yaml --train_model
+python openwakeword/openwakeword/train.py --training_config my_model.yaml --generate_clips
+python openwakeword/openwakeword/train.py --training_config my_model.yaml --augment_clips
+python openwakeword/openwakeword/train.py --training_config my_model.yaml --train_model
 ```
