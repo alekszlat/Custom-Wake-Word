@@ -1,4 +1,4 @@
-# Custom Wake-Word Training — Environment & Commands
+# 🧰 Custom Wake-Word Training — Environment & Commands
 
 ## 1) Tools & audio libs
 ```bash
