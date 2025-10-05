@@ -1,0 +1,8 @@
+[submodule "openWakeWord"]
+	path = openWakeWord
+	url = https://github.com/dscripka/openWakeWord.git
+	branch = main
+[submodule "piper-sample-generator"]
+	path = piper-sample-generator
+	url = https://github.com/dscripka/piper-sample-generator.git
+	branch = master
