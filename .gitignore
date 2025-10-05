@@ -3,8 +3,6 @@ background_clips
 mit_rirs
 my_custom_model/my_model.onnx
 my_custom_model/my_model
-openwakeword
-piper-sample-generator
 voices
 my_model.yaml
 openwakeword_features_ACAV100M_2000_hrs_16bit.npy
