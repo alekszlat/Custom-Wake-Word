@@ -1,0 +1,32 @@
+# Use PyTorch CPU wheels in addition to PyPI
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# PyTorch (CPU)
+torch==2.5.1
+torchaudio==2.5.1
+torchvision==0.20.1
+
+# HF Datasets + Arrow
+datasets>=2.18,<3.0
+pyarrow>=12,<18
+
+# Audio & augmentation
+soundfile
+scipy
+numpy
+tqdm
+audiomentations==0.33.0
+torch-audiomentations==0.11.0
+acoustics==0.2.6
+
+# Metrics & helpers
+torchmetrics==1.2.0
+torchinfo==1.8.0
+mutagen==1.47.0
+pronouncing==0.2.0
+
+# Piper + phonemizers (TTS synth for data generation)
+piper-tts
+espeak-phonemizer
+deep-phonemizer==0.0.19
+speechbrain==0.5.14

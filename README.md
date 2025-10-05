@@ -1,13 +1,18 @@
 # 🧰 Custom Wake-Word Training — Environment & Commands
 
-## 1) Tools & audio libs
+## 1) Clone this repo
+```bash
+git clone --recursive https://github.com/alekszlat/Custom-Wake-Word 
+```
+
+## 2) Tools & audio libs
 ```bash
 sudo apt-get update
 sudo apt-get install -y software-properties-common build-essential git wget curl \
     ffmpeg sox libsndfile1 espeak-ng espeak-ng-data libespeak-ng1
 ```
 
-## 2) Add the Deadsnakes PPA (trusted source for alternate Python versions)
+## 3) Add the Deadsnakes PPA (trusted source for alternate Python versions)
 ```bash
 sudo apt-get update
 sudo apt-get install -y software-properties-common
@@ -15,36 +20,17 @@ sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt-get update
 ```
 
-## 3) Install 3.10 + venv + headers and set up venv
+## 4) Install 3.10 + venv + headers and set up venv
 ```bash
 sudo apt-get install -y python3.10 python3.10-venv python3.10-dev
 python3.10 -m venv venv
 source venv/bin/activate
 ```
 
-## 4) Install dependencies
+## 5) Install dependencies
 ```bash
 # PyTorch (CPU trio) – avoids CUDA mismatch errors
-pip install --index-url https://download.pytorch.org/whl/cpu \
-  "torch==2.5.1" "torchaudio==2.5.1" "torchvision==0.20.1"
-
-# HF Datasets + Arrow (avoid pyarrow API errors)
-pip install "datasets>=2.18,<3.0" "pyarrow>=12,<18"
-
-# Audio & augmentation
-pip install soundfile scipy numpy tqdm audiomentations==0.33.0 torch-audiomentations==0.11.0 acoustics==0.2.6
-
-# Metrics & helpers
-pip install torchmetrics==1.2.0 torchinfo==1.8.0 mutagen==1.47.0 pronouncing==0.2.0
-
-# Piper + phonemizers (TTS synth for data generation)
-pip install piper-tts espeak-phonemizer deep-phonemizer==0.0.19 speechbrain==0.5.14
-```
-
-## 5)Clone repos
-```bash
-git clone https://github.com/dscripka/openWakeWord.git
-git clone https://github.com/dscripka/piper-sample-generator.git
+pip install -r requirements.txt
 ```
 
 ## 6) Download OpenWakeWord models
